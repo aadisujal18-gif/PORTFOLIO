@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadi Nigam - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeBtn" class="theme-btn">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Aadi</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3D Canvas -->
+    <canvas id="canvas3d"></canvas>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="stars"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle"></h1>
+            <p class="hero-subtitle">Full Stack Developer | Tech Enthusiast | Problem Solver</p>
+            <p class="hero-description">Crafting elegant solutions with Python, Linux, SQL & Modern Web Technologies</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Aadi Nigam, a passionate developer with a keen interest in building innovative solutions and exploring cutting-edge technologies. With a strong foundation in Python, Linux, SQL, and office productivity tools, I'm constantly learning and evolving.</p>
+                    <p>I believe in clean code, efficient solutions, and creating meaningful digital experiences. I'm always ready to take on new challenges and collaborate with creative minds.</p>
+                </div>
+                <div class="about-info">
+                    <div class="info-card">
+                        <span class="info-label">Date of Birth</span>
+                        <span class="info-value">18.01.2007</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Age</span>
+                        <span class="info-value">19</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Location</span>
+                        <span class="info-value">Umaria, Madhya Pradesh</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Languages</span>
+                        <span class="info-value">English, Hindi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Backend development, automation, data processing</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🖥️</div>
+                    <h3>Linux</h3>
+                    <p>System administration, server management</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>SQL</h3>
+                    <p>Database design, complex queries, optimization</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>MS Office</h3>
+                    <p>Excel, Word, PowerPoint, Data Analysis</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, Responsive Design</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 87%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Modern interfaces, User experience, 3D web</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card add-project-card">
+                    <div class="project-image">
+                        <div class="project-icon">➕</div>
+                    </div>
+                    <h3>Your Project Here</h3>
+                    <p>Add your first project to showcase your amazing work and skills to the world.</p>
+                    <div class="project-tags">
+                        <span class="tag">Coming Soon</span>
+                    </div>
+                </div>
+                <div class="project-card add-project-card">
+                    <div class="project-image">
+                        <div class="project-icon">➕</div>
+                    </div>
+                    <h3>Your Project Here</h3>
+                    <p>Add your second project to showcase your amazing work and skills to the world.</p>
+                    <div class="project-tags">
+                        <span class="tag">Coming Soon</span>
+                    </div>
+                </div>
+                <div class="project-card add-project-card">
+                    <div class="project-image">
+                        <div class="project-icon">➕</div>
+                    </div>
+                    <h3>Your Project Here</h3>
+                    <p>Add your third project to showcase your amazing work and skills to the world.</p>
+                    <div class="project-tags">
+                        <span class="tag">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <!-- Contact Info Display Section -->
+            <div class="contact-section">
+                <div class="contact-info-section">
+                    <h3 class="contact-section-title">My Information</h3>
+                    <div class="info-display-grid">
+                        <div class="info-display-card">
+                            <div class="info-display-icon">📧</div>
+                            <div class="info-display-content">
+                                <h4>Email</h4>
+                                <a href="mailto:aadisujal18@gmail.com" class="info-link">aadisujal18@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-display-card">
+                            <div class="info-display-icon">📱</div>
+                            <div class="info-display-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+916268243099" class="info-link">+91 6268243099</a>
+                                <a href="tel:+916261148430" class="info-link">+91 6261148430</a>
+                            </div>
+                        </div>
+                        <div class="info-display-card">
+                            <div class="info-display-icon">📍</div>
+                            <div class="info-display-content">
+                                <h4>Address</h4>
+                                <p class="info-text">Bandhavgarh Tala, Manpur<br>Main Road, Umaria<br>Madhya Pradesh, India</p>
+                            </div>
+                        </div>
+                        <div class="info-display-card">
+                            <div class="info-display-icon">👨‍💻</div>
+                            <div class="info-display-content">
+                                <h4>Professional Info</h4>
+                                <p class="info-text">Age: 19<br>DOB: 18.01.2007<br>Languages: English, Hindi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="contact-form-section">
+                    <h3 class="contact-section-title">Connect With Me</h3>
+                    <p class="form-subtitle">Send me a message and I'll get back to you soon!</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                        <div class="success-message" id="successMessage" style="display: none;">
+                            <h4>Thank You! ✨</h4>
+                            <p>Thanks for reaching out! I appreciate your message and will respond as soon as possible. Have a great day!</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Aadi Nigam. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
