@@ -201,15 +201,34 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 
 // Contact Form
 const contactForm = document.getElementById('contactForm');
+
+function notifyRecipient(name, email, message) {
+    const subject = `New contact request from ${name}`;
+    const emailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoUrl = `mailto:aadisujal18@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    const whatsappUrl = `https://wa.me/6268243099?text=${encodeURIComponent(`New contact request from ${name} (${email})\n\n${message}`)}`;
+
+    const mailLink = document.createElement('a');
+    mailLink.href = mailtoUrl;
+    mailLink.style.display = 'none';
+    document.body.appendChild(mailLink);
+    mailLink.click();
+    document.body.removeChild(mailLink);
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+}
+
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
         // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
         
+        notifyRecipient(name, email, message);
+
         // Hide form and show success message
         contactForm.style.display = 'none';
         const successMessage = document.getElementById('successMessage');

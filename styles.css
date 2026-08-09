@@ -341,7 +341,13 @@ body {
     padding: 15px 30px;
     font-size: 1.1rem;
 }
-
+.notify-hint {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.8;
+}
 /* Container */
 .container {
     max-width: 1200px;
