@@ -3,222 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadi Nigam - Portfolio</title>
+    <meta name="description" content="Aadi Nigam is an aspiring developer exploring Python, SQL, Linux, and the web.">
+    <meta name="theme-color" content="#f7f7f2">
+    <title>Aadi Nigam — Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <button id="themeBtn" class="theme-btn">
-            <span class="sun-icon">🌕</span>
-            <span class="moon-icon">🌑</span>
-        </button>
-    </div>
-
-    <!-- Navigation -->
+    <a class="skip-link" href="#main">Skip to content</a>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Aadi</div>
-            <ul class="nav-menu">
+            <a class="nav-logo" href="#home" aria-label="Aadi Nigam, home">AN<span>.</span></a>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button id="themeBtn" class="theme-btn" type="button" aria-label="Switch to dark theme" title="Switch theme">
+                <span class="theme-icon" aria-hidden="true">☾</span>
+            </button>
         </div>
     </nav>
 
-    <!-- 3D Canvas -->
-    <canvas id="canvas3d"></canvas>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="stars"></div>
+    <main id="main">
+      <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title" id="heroTitle"></h1>
-            <p class="hero-subtitle"> Coder | Tech Enthusiast | Problem Solver</p>
-            <p class="hero-description">Creating  elegant things with Python, And other skills Linux, SQL & Modern Web Technologies</p>
+            <p class="eyebrow"><span class="status-dot"></span> Aspiring developer <span class="eyebrow-divider">/</span> Umaria, India</p>
+            <h1 class="hero-title">Hi, I’m Aadi.<br><span>I build with curiosity.</span></h1>
+            <p class="hero-description">Exploring Python, SQL, Linux, and the web—one thoughtful project at a time.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">↘</span></a>
+                <a href="#contact" class="text-link">Get in touch <span aria-hidden="true">↗</span></a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+        <div class="hero-aside" aria-hidden="true">
+            <span class="hero-aside-number">01</span>
+            <span class="hero-aside-line"></span>
+            <span>Curious by nature.<br>Intentional by design.</span>
         </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+      <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-heading">
+                <p class="eyebrow">A little about me</p>
+                <h2 class="section-title">Learning by making.</h2>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm Aadi Nigam, a passionate coder with a keen interest in building innovative solutions and exploring cutting-edge technologies. With a strong foundation in Python, Linux, SQL, and office productivity tools, I'm constantly learning and evolving.</p>
-                    <p>I believe in clean code, efficient solutions, and creating meaningful digital experiences. I'm always ready to take on new challenges and collaborate with creative minds.</p>
+                    <p>I’m Aadi Nigam, an early-career developer building a foundation in programming and practical problem-solving. I enjoy understanding how things work, then turning that curiosity into useful, clear solutions.</p>
+                    <p>Right now, I’m growing my skills in Python, databases, Linux, and front-end development. I value steady learning, thoughtful work, and collaborating with people who care about what they build.</p>
                 </div>
                 <div class="about-info">
                     <div class="info-card">
-                        <span class="info-label">Date of Birth</span>
-                        <span class="info-value">18.01.2007</span>
-                    </div>
-                    <div class="info-card">
-                        <span class="info-label">Age</span>
-                        <span class="info-value">19</span>
-                    </div>
-                    <div class="info-card">
-                        <span class="info-label">Location</span>
-                        <span class="info-value">Umaria, Madhya Pradesh</span>
+                        <span class="info-label">Based in</span>
+                        <span class="info-value">Madhya Pradesh, India</span>
                     </div>
                     <div class="info-card">
                         <span class="info-label">Languages</span>
                         <span class="info-value">English, Hindi</span>
                     </div>
+                    <div class="info-card">
+                        <span class="info-label">Currently exploring</span>
+                        <span class="info-value">Python &amp; the web</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Approach</span>
+                        <span class="info-value">Curious, consistent, practical</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+      <section id="skills" class="skills section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Tools &amp; technologies</p>
+                <h2 class="section-title">Skills in progress.</h2>
+                <p class="section-intro">The tools I’m learning and using as I build my developer toolkit.</p>
+            </div>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">🐍</div>
+                    <div class="skill-icon" aria-hidden="true">Py</div>
                     <h3>Python</h3>
-                    <p>Backend development, automation, data processing</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
+                    <p>Programming fundamentals, scripting, and problem-solving.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🖥️</div>
+                    <div class="skill-icon" aria-hidden="true">&gt;_</div>
                     <h3>Linux</h3>
-                    <p>System administration, server management</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
+                    <p>Command line, everyday workflows, and system basics.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
+                    <div class="skill-icon" aria-hidden="true">{ }</div>
                     <h3>SQL</h3>
-                    <p>Database design, complex queries, optimization</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
-                    </div>
+                    <p>Relational data, queries, and database fundamentals.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <h3>MS Office</h3>
-                    <p>Excel, Word, PowerPoint, Data Analysis</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%;"></div>
-                    </div>
+                    <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+                    <h3>Web fundamentals</h3>
+                    <p>HTML, CSS, JavaScript, and responsive interfaces.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript, Responsive Design</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 87%;"></div>
-                    </div>
+                    <div class="skill-icon" aria-hidden="true">01</div>
+                    <h3>Office tools</h3>
+                    <p>Excel, Word, and PowerPoint for everyday productivity.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Modern interfaces, User experience, 3D web</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
+                    <div class="skill-icon" aria-hidden="true">✳</div>
+                    <h3>Problem-solving</h3>
+                    <p>Breaking questions down and working toward clear solutions.</p>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+      <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Final-year project</p>
+                <h2 class="section-title">A portfolio built to feel like me.</h2>
+                <p class="section-intro">A personal website to introduce myself, share what I’m learning, and make it easy to get in touch.</p>
+            </div>
             <div class="projects-grid" id="projectsGrid">
-                <div class="project-card add-project-card">
-                    <div class="project-image">
-                        <div class="project-icon">➕</div>
+                <article class="project-card">
+                    <div class="project-preview" aria-hidden="true">
+                        <div class="preview-browser">
+                            <div class="preview-toolbar">
+                                <span class="preview-dots"><i></i><i></i><i></i></span>
+                                <span class="preview-address">aadi-nigam / portfolio</span>
+                            </div>
+                            <div class="preview-page">
+                                <div class="preview-nav"><strong>AN<span>.</span></strong><span>ABOUT&nbsp;&nbsp; WORK&nbsp;&nbsp; CONTACT</span></div>
+                                <div class="preview-copy">
+                                    <span class="preview-kicker">ASPIRING DEVELOPER</span>
+                                    <span class="preview-heading">Hi, I’m Aadi.<br><b>I build with curiosity.</b></span>
+                                    <span class="preview-button">EXPLORE MY WORK&nbsp; ↘</span>
+                                </div>
+                                <span class="preview-orbit"></span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Your Project Here</h3>
-                    <p>Add your first project to showcase your amazing work and skills to the world.</p>
-                    <div class="project-tags">
-                        <span class="tag">Coming Soon</span>
+                    <div class="project-details">
+                        <div class="project-meta">
+                            <span class="project-label"><span class="status-dot"></span> Final-year project</span>
+                            <span class="project-index">01 / 01</span>
+                        </div>
+                        <h3>Personal Portfolio Website</h3>
+                        <p>A responsive, single-page portfolio designed to present my background, skills, and work with a consistent visual identity.</p>
+                        <ul class="project-features">
+                            <li>Responsive layout with mobile navigation</li>
+                            <li>Light and dark themes</li>
+                            <li>Accessible contact form that opens an email draft</li>
+                        </ul>
+                        <div class="project-footer">
+                            <div class="project-tags" aria-label="Technologies used">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <a class="text-link" href="#home">You’re viewing it <span aria-hidden="true">↗</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card add-project-card">
-                    <div class="project-image">
-                        <div class="project-icon">➕</div>
-                    </div>
-                    <h3>Your Project Here</h3>
-                    <p>Add your second project to showcase your amazing work and skills to the world.</p>
-                    <div class="project-tags">
-                        <span class="tag">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="project-card add-project-card">
-                    <div class="project-image">
-                        <div class="project-icon">➕</div>
-                    </div>
-                    <h3>Your Project Here</h3>
-                    <p>Add your third project to showcase your amazing work and skills to the world.</p>
-                    <div class="project-tags">
-                        <span class="tag">Coming Soon</span>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+      <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            
-            <!-- Contact Info Display Section -->
+            <div class="section-heading">
+                <p class="eyebrow">Have a question or idea?</p>
+                <h2 class="section-title">Let’s talk.</h2>
+                <p class="section-intro">I’m open to conversations, learning opportunities, and thoughtful collaborations.</p>
+            </div>
             <div class="contact-section">
                 <div class="contact-info-section">
-                    <h3 class="contact-section-title">My Information</h3>
+                    <h3 class="contact-section-title">Find me here</h3>
                     <div class="info-display-grid">
                         <div class="info-display-card">
-                            <div class="info-display-icon">📧</div>
+                            <div class="info-display-icon" aria-hidden="true">↗</div>
                             <div class="info-display-content">
                                 <h4>Email</h4>
                                 <a href="mailto:aadisujal18@gmail.com" class="info-link">aadisujal18@gmail.com</a>
                             </div>
                         </div>
                         <div class="info-display-card">
-                            <div class="info-display-icon">📱</div>
+                            <div class="info-display-icon" aria-hidden="true">⌖</div>
                             <div class="info-display-content">
-                                <h4>Phone</h4>
-                                <a href="tel:+916268243099" class="info-link">+91 6268243099</a>
-                                <a href="tel:+916261148430" class="info-link">+91 6261148430</a>
-                            </div>
-                        </div>
-                        <div class="info-display-card">
-                            <div class="info-display-icon">📍</div>
-                            <div class="info-display-content">
-                                <h4>Address</h4>
-                                <p class="info-text">Bandhavgarh Tala, Manpur<br>Main Road, Umaria<br>Madhya Pradesh, India</p>
-                            </div>
-                        </div>
-                        <div class="info-display-card">
-                            <div class="info-display-icon">👨‍💻</div>
-                            <div class="info-display-content">
-                                <h4>Professional Info</h4>
-                                <p class="info-text">Age: 19<br>DOB: 18.01.2007<br>Languages: English, Hindi</p>
+                                <h4>Location</h4>
+                                <p class="info-text">Madhya Pradesh, India</p>
                             </div>
                         </div>
                     </div>
@@ -226,38 +205,35 @@
 
                 <!-- Contact Form Section -->
                 <div class="contact-form-section">
-                    <h3 class="contact-section-title">Connect With Me</h3>
-                    <p class="form-subtitle">Send me a message and I'll get back to you soon!</p>
+                    <h3 class="contact-section-title">Send a message</h3>
+                    <p class="form-subtitle">Your email app will open with your message ready to send.</p>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="What would you like to talk about?" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                        <p class="notify-hint">Submitting this form will also open a notification for me via email and WhatsApp.</p>
-                        <div class="success-message" id="successMessage" style="display: none;">
-                            <h4>Thank You! ✨</h4>
-                            <p>Thanks for reaching out! I appreciate your message and will respond as soon as possible. Have a great day!</p>
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Open email app <span aria-hidden="true">↗</span></button>
+                        <p class="notify-hint" id="formStatus" aria-live="polite">This form doesn’t store or send your information.</p>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Aadi Nigam. All rights reserved.</p>
-
+            <p>Designed &amp; built by Aadi Nigam</p>
+            <a href="#home">Back to top ↑</a>
         </div>
     </footer>
 
