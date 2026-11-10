@@ -796,6 +796,123 @@ a {
     text-underline-offset: 3px;
 }
 
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.social-card {
+    display: flex;
+    min-width: 0;
+    min-height: 84px;
+    align-items: center;
+    gap: 10px;
+    padding: 11px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--bg);
+    text-decoration: none;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+}
+
+.social-icon,
+.detail-icon {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 5px;
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+}
+
+.social-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.instagram-card .social-icon {
+    color: #b44873;
+}
+
+.linkedin-card .social-icon {
+    color: #0a66c2;
+}
+
+.github-card .social-icon {
+    color: var(--text);
+}
+
+.social-copy,
+.contact-detail > span:nth-child(2) {
+    display: grid;
+    min-width: 0;
+    gap: 2px;
+}
+
+.social-copy strong,
+.contact-detail strong {
+    color: var(--text);
+    font-size: .73rem;
+    font-weight: 700;
+}
+
+.social-copy > span,
+.contact-detail > span:nth-child(2) > span {
+    color: var(--muted);
+    font-size: .68rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.social-arrow {
+    flex: 0 0 auto;
+    margin-left: auto;
+    color: var(--accent-strong);
+    font-size: .78rem;
+}
+
+.contact-details {
+    display: grid;
+    gap: 9px;
+    margin-top: 14px;
+}
+
+.contact-detail {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--bg);
+    text-decoration: none;
+}
+
+a.contact-detail {
+    transition: border-color .2s ease, background .2s ease;
+}
+
+a.contact-detail:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.detail-icon {
+    width: 32px;
+    height: 32px;
+    font-size: .95rem;
+}
+
 .form-subtitle {
     margin: -12px 0 22px;
     color: var(--muted);
@@ -1015,6 +1132,21 @@ a {
     .contact-info-section,
     .contact-form-section {
         padding: 22px;
+    }
+
+    .social-card {
+        gap: 8px;
+        padding: 10px 8px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icon svg {
+        width: 17px;
+        height: 17px;
     }
 
     .footer .container {
